@@ -1,18 +1,18 @@
-import type { HomeMetaData } from '$lib/models/pages/home_metadata';
+import type { AboutMetaData } from '$lib/models/pages/about_metadata';
 import { fetchPageData } from '$lib/utils/page';
 import { error } from '@sveltejs/kit';
 import type { PageLoad } from './$types';
 
 export const load = (async () => {
 	try {
-		const homeData = await fetchPageData<HomeMetaData>('home');
+		const pageData = await fetchPageData<AboutMetaData>('about');
 		return {
-			...homeData.metadata,
-			Content: homeData.Content
+			...pageData.metadata,
+			Content: pageData.Content
 		};
 	} catch (_) {
 		throw error(500, {
-			message: 'Can not load home data'
+			message: 'Can not load about data'
 		});
 	}
 }) satisfies PageLoad;

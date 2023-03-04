@@ -7,10 +7,10 @@ buttons:
   secondary: 'SvelteKit'
   secondaryUrl: 'https://kit.svelte.dev/'
 features:
-  - title: 'SvelteKit'
-    summary: 'Web development, streamlined'
-  - title: 'Tailwind CSS'
-    summary: 'Rapidly build modern websites without ever leaving your HTML'
-  - title: 'Markdown'
-    summary: 'Markdown makes writing on the web fast and easy'
+  - title: 'Ultra fast'
+    summary: 'JAM Stack websites are rendered statically and are therefore extremely performant.'
+  - title: 'Perfect DX'
+    summary: 'Svelte and SvelteKit are very intuitive and productive UI frameworks, resulting in a first-class developer experience.'
+  - title: 'Content'
+    summary: 'You own your content completely and can easily manage it in Markdown files.'
 ---

@@ -1,7 +1,4 @@
-type TitleWithSummary = {
-	title: string;
-	summary: string;
-};
+import type { TitleWithSummary } from '../title_with_summary';
 
 export type HomeMetaData = TitleWithSummary & {
 	features: TitleWithSummary[];

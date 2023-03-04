@@ -1,4 +1,5 @@
 @import '$lib/styles/inter.css';
+@import '$lib/styles/prism.css';
 
 @tailwind base;
 @tailwind components;

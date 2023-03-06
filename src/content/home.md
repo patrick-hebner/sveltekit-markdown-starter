@@ -13,4 +13,7 @@ features:
     summary: 'Svelte and SvelteKit are very intuitive and productive UI frameworks, resulting in a first-class developer experience.'
   - title: 'Content'
     summary: 'You own your content completely and can easily manage it in Markdown files.'
+projects:
+  title: 'Latest projects'
+  button: 'See all projects'
 ---

@@ -2,6 +2,7 @@
 title: 'Markdown'
 summary: 'Markdown makes writing on the web fast and easy'
 category: 'Markup language'
+date: '2023-01-09'
 cta:
   label: 'Go to project'
   url: 'https://www.markdownguide.org/'

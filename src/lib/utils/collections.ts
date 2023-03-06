@@ -25,6 +25,15 @@ export async function fetchCollectionData<T>(collection: string): Promise<MetaDa
 	return collectionItems;
 }
 
+export async function getLatestCollectionEntries<T extends { date: string }>(
+	collection: string,
+	limit: number
+): Promise<MetaDataWithPath<T>[]> {
+	const entries = await fetchCollectionData<T>(collection);
+	const sorted = sortByDate<T>(entries);
+	return limitEntries(sorted, limit);
+}
+
 export async function fetchCollectionItemData<T>(
 	collection: Collection,
 	item: string
@@ -35,4 +44,23 @@ export async function fetchCollectionItemData<T>(
 		metadata: post.metadata,
 		Content: post.default
 	};
+}
+
+export function limitEntries<T>(
+	entries: MetaDataWithPath<T>[],
+	limit?: number
+): MetaDataWithPath<T>[] {
+	if (!limit || entries.length <= limit) {
+		return entries;
+	}
+
+	return entries.slice(0, limit);
+}
+
+export function sortByDate<T extends { date: string }>(
+	entries: MetaDataWithPath<T>[]
+): MetaDataWithPath<T>[] {
+	return entries.sort((a: MetaDataWithPath<T>, b: MetaDataWithPath<T>) => {
+		return new Date(b.metadata.date).getTime() - new Date(a.metadata.date).getTime();
+	});
 }

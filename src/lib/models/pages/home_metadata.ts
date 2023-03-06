@@ -8,4 +8,8 @@ export type HomeMetaData = TitleWithSummary & {
 		secondary: string;
 		secondaryUrl: string;
 	};
+	projects: {
+		title: string;
+		button: string;
+	};
 };

@@ -2,6 +2,7 @@
 title: 'Tailwind CSS'
 summary: 'Rapidly build modern websites without ever leaving your HTML'
 category: 'CSS Framework'
+date: '2023-01-03'
 cta:
   label: 'Go to project'
   url: 'https://tailwindcss.com/'

@@ -2,6 +2,7 @@
 title: 'SvelteKit'
 summary: 'web development, streamlined'
 category: 'JS framework'
+date: '2023-01-05'
 cta:
   label: 'Go to project'
   url: 'https://kit.svelte.dev/'

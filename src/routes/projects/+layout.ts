@@ -3,7 +3,7 @@ import type { ProjectMetaData } from '$lib/models/pages/project_metadata';
 import { fetchCollectionData } from '$lib/utils/collections';
 import { fetchPageData } from '$lib/utils/page';
 import { error } from '@sveltejs/kit';
-import type { PageLoad } from './$types';
+import type { LayoutLoad } from './$types';
 
 export const load = (async () => {
 	try {
@@ -11,12 +11,11 @@ export const load = (async () => {
 		const projects = await fetchCollectionData<ProjectMetaData>('projects');
 		return {
 			...pageData.metadata,
-			projects: projects,
-			Content: pageData.Content
+			projects: projects
 		};
 	} catch (_) {
 		throw error(500, {
 			message: 'Can not load projects data'
 		});
 	}
-}) satisfies PageLoad;
+}) satisfies LayoutLoad;

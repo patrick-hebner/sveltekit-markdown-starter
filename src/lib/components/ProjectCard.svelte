@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { ProjectMetaData } from '$lib/models/pages/project_metadata';
+	import CategoryLink from './CategoryLink.svelte';
 	import Heading from './Heading.svelte';
 
 	export let project: ProjectMetaData;
@@ -19,9 +20,7 @@
 			<Heading variant="sm" level="h2">{project.title}</Heading>
 		</div>
 		<p class="text-base-400">{project.summary}</p>
-		<div class="ring-primary-500 ring-2 text-primary-500 text-xs px-2 py-1 rounded w-fit">
-			{project.category}
-		</div>
+		<CategoryLink category={project.category} />
 	</div>
 	<a class="w-fit px-4 py-2 rounded bg-primary-500 text-body-inverse" href={path}>Open</a>
 </div>

@@ -1,4 +1,5 @@
 import type { MetaDataWithPath, Markdown, MarkdownData } from '$lib/models/markdown';
+import { slugify } from './slugify';
 
 export type Collection = 'projects';
 
@@ -62,5 +63,15 @@ export function sortByDate<T extends { date: string }>(
 ): MetaDataWithPath<T>[] {
 	return entries.sort((a: MetaDataWithPath<T>, b: MetaDataWithPath<T>) => {
 		return new Date(b.metadata.date).getTime() - new Date(a.metadata.date).getTime();
+	});
+}
+
+export function filterByCategory<T extends { category?: string }>(
+	entries: MetaDataWithPath<T>[],
+	category: string
+): MetaDataWithPath<T>[] {
+	return entries.filter((t: MetaDataWithPath<T>) => {
+		const currentCategory = slugify(t.metadata.category || '');
+		return currentCategory === category;
 	});
 }

@@ -6,9 +6,12 @@
 	import type { MetaDataWithPath } from '$lib/models/markdown';
 	import type { ProjectsMetaData } from '$lib/models/pages/projects_metadata';
 	import type { ProjectMetaData } from '$lib/models/pages/project_metadata';
+	import CategorySelect from '$lib/components/CategorySelect.svelte';
+	import { getCategoryName } from '$lib/utils/collections';
 
 	export let data: ProjectsMetaData & {
 		projects: MetaDataWithPath<ProjectMetaData>[];
+		categories: string[];
 	};
 	export let category: string = '';
 </script>
@@ -17,12 +20,15 @@
 	<Container>
 		<div class="grid gap-4">
 			{#if category}
-				<Heading level="h2" variant="2xs" extraClasses="text-primary-500">{category}</Heading>
+				<Heading level="h2" variant="2xs" extraClasses="text-primary-500"
+					>{getCategoryName(data.categories, category)}</Heading
+				>
 			{/if}
 			<Heading>{data.title}</Heading>
 			<p>
 				{data.summary}
 			</p>
+			<CategorySelect categories={data.categories} activeCategory={category} />
 		</div>
 	</Container>
 </Section>

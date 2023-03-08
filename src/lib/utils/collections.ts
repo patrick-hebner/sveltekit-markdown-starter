@@ -75,3 +75,13 @@ export function filterByCategory<T extends { category?: string }>(
 		return currentCategory === category;
 	});
 }
+
+export function getCategoriesFromCollection(
+	entries: MetaDataWithPath<{ category: string }>[]
+): string[] {
+	return [...new Set(entries.map((e) => e.metadata.category))];
+}
+
+export function getCategoryName(categories: string[], slug: string): string {
+	return categories.find((c) => slugify(c) === slug) || '';
+}

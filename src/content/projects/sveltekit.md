@@ -1,4 +1,7 @@
 ---
+seo:
+  title: 'SvelteKit - SvelteKit starter'
+  description: 'SvelteKit project'
 title: 'SvelteKit'
 summary: 'web development, streamlined'
 category: 'JS framework'

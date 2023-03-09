@@ -1,4 +1,7 @@
 ---
+seo:
+  title: 'About - SvelteKit starter'
+  description: 'All about us'
 title: 'SvelteKit Markdown Starter'
 summary: 'This starter code uses SvelteKit together with markdown files as a static site generator, to create a high performance jam stack page.'
 social:

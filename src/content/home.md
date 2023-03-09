@@ -1,4 +1,7 @@
 ---
+seo:
+  title: 'SvelteKit markdown starter'
+  description: 'A simple SvelteKit project with content management via markdown files to get you started'
 title: 'SvelteKit Markdown Starter'
 summary: 'This starter code uses SvelteKit together with markdown files as a static site generator, to create a high performance jam stack page.'
 buttons:

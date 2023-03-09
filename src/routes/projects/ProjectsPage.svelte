@@ -8,6 +8,7 @@
 	import type { ProjectMetaData } from '$lib/models/pages/project_metadata';
 	import CategorySelect from '$lib/components/CategorySelect.svelte';
 	import { getCategoryName } from '$lib/utils/collections';
+	import Seo from '$lib/components/Seo.svelte';
 
 	export let data: ProjectsMetaData & {
 		projects: MetaDataWithPath<ProjectMetaData>[];
@@ -15,6 +16,8 @@
 	};
 	export let category: string = '';
 </script>
+
+<Seo seo={data.seo} />
 
 <Section>
 	<Container>

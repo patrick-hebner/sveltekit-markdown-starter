@@ -1,4 +1,7 @@
 ---
+seo:
+  title: 'Tailwind CSS - SvelteKit starter'
+  description: 'Tailwind CSS project'
 title: 'Tailwind CSS'
 summary: 'Rapidly build modern websites without ever leaving your HTML'
 category: 'CSS Framework'

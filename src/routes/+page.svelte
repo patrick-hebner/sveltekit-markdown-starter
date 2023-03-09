@@ -4,9 +4,12 @@
 	import Heading from '$lib/components/Heading.svelte';
 	import type { PageData } from './$types';
 	import ProjectCard from '$lib/components/ProjectCard.svelte';
+	import Seo from '$lib/components/Seo.svelte';
 
 	export let data: PageData;
 </script>
+
+<Seo seo={data.seo} />
 
 <Section>
 	<Container>

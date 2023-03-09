@@ -1,4 +1,7 @@
 ---
+seo:
+  title: 'Markdown - SvelteKit starter'
+  description: 'Markdown project'
 title: 'Markdown'
 summary: 'Markdown makes writing on the web fast and easy'
 category: 'Markup language'

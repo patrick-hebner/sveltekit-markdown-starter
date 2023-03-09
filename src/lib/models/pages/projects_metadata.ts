@@ -1,3 +1,4 @@
-import type { TitleWithSummary } from '../title_with_summary';
+import type { SeoSection } from '$lib/models/seo';
+import type { TitleWithSummary } from '$lib/models/title_with_summary';
 
-export type ProjectsMetaData = TitleWithSummary;
+export type ProjectsMetaData = SeoSection & TitleWithSummary;

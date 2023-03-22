@@ -82,6 +82,7 @@ export const collections: { [key: string]: Record<string, () => Promise<unknown>
 
 - SEO component for conveniently adding meta tags for title and description (extendable according to your needs)
 - Category filter for projects
+- Latest projects on homepage
 - Tailwind CSS integration with prepared configuration
 - Basic components for your page layout
 - Custom font integration

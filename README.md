@@ -1,5 +1,7 @@
 # SvelteKit Markdown Starter
 
+<img width="1240" alt="Bildschirm­foto 2023-02-28 um 06 12 19" src="https://user-images.githubusercontent.com/6704069/226823919-54a0d0d6-8d89-4790-89ee-27f98b14900f.png">
+
 This is a website starter for building a JAM stack site with
 
 - SvetleKit
